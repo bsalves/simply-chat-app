@@ -1,9 +1,6 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
-  p "production.rb"
-    
-  config.cache_store = :redis_cache_store, { url: "redis://default:gVFaW09h2DkQLG1NjVg5FZNnanF5WkDH@redis-16110.c90.us-east-1-3.ec2.redns.redis-cloud.com:16110" }
 
   # Settings specified here will take precedence over those in config/application.rb.
 
