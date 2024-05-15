@@ -1,5 +1,5 @@
 class ChatChannel < ApplicationCable::Channel
-  before_subscribe :set_room
+  before_subscribe :set_room, :set_usuario
 
   def subscribed
     stream_from @chat_room
@@ -18,4 +18,7 @@ class ChatChannel < ApplicationCable::Channel
     @chat_room = params[:chat]
   end
 
+  def set_usuario
+    @usuario = params[:usuario]
+  end
 end

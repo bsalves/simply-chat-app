@@ -1,8 +1,9 @@
 import consumer from "channels/consumer"
 
-const params = new URLSearchParams(window.location.search).get("chat")
+const chat = new URLSearchParams(window.location.search).get("chat")
+const usuario = new URLSearchParams(window.location.search).get("usuario")
 
-consumer.subscriptions.create({ channel: "ChatChannel", chat: params }, {
+consumer.subscriptions.create({ channel: "ChatChannel", chat: chat, usuario: usuario }, {
     connected() {
         this.input = document.getElementById("input")
         this.chat = document.getElementById("chat")
