@@ -1,7 +1,7 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
-  config.cache_store = :redis_cache_store, { url: ENV.fetch("REDIS_PROVIDER", "redis://localhost:6379/0") }
+  config.cache_store = :redis_cache_store, { url: ENV.fetch("REDISCLOUD_URL", "redis://localhost:6379/0") }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
