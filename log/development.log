@@ -3536,3 +3536,87 @@ ChatChannel#receive({"mensagem"=>"🎄!"})
 ChatChannel transmitting {"mensagem"=>"🎄!", "usuario"=>nil} (via streamed from hello)
 ChatChannel transmitting {"mensagem"=>"🎄!", "usuario"=>nil} (via streamed from hello)
 ChatChannel transmitting {"mensagem"=>"🎄!", "usuario"=>nil} (via streamed from hello)
+Started GET "/" for 127.0.0.1 at 2024-05-15 12:04:35 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChatController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering chat/index.html.erb within layouts/application
+  Rendered chat/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 67.7ms | Allocations: 49296)
+Completed 200 OK in 93ms (Views: 73.1ms | ActiveRecord: 0.0ms | Allocations: 56281)
+
+
+Started GET "/cable" for 127.0.0.1 at 2024-05-15 12:04:35 -0300
+Started GET "/cable" [WebSocket] for 127.0.0.1 at 2024-05-15 12:04:35 -0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+[ActionCable] Broadcasting to : {:mensagem=>"Usuario  entrou"}
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from 
+Started GET "/" for 127.0.0.1 at 2024-05-15 12:04:49 -0300
+Processing by ChatController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering chat/index.html.erb within layouts/application
+  Rendered chat/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 6137)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.0ms | Allocations: 6529)
+
+
+Started GET "/cable" for 127.0.0.1 at 2024-05-15 12:04:49 -0300
+Started GET "/cable" [WebSocket] for 127.0.0.1 at 2024-05-15 12:04:49 -0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+[ActionCable] Broadcasting to : {:mensagem=>"Usuario  entrou"}
+ChatChannel is streaming from 
+ChatChannel is transmitting the subscription confirmation
+ChatChannel transmitting {"mensagem"=>"Usuario  entrou"} (via streamed from )
+ChatChannel transmitting {"mensagem"=>"Usuario  entrou"} (via streamed from )
+Finished "/cable" [WebSocket] for 127.0.0.1 at 2024-05-15 12:04:50 -0300
+ChatChannel stopped streaming from 
+Started GET "/?chat=123" for 127.0.0.1 at 2024-05-15 12:04:53 -0300
+Processing by ChatController#index as HTML
+  Parameters: {"chat"=>"123"}
+  Rendering layout layouts/application.html.erb
+  Rendering chat/index.html.erb within layouts/application
+  Rendered chat/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 10)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1523)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1873)
+
+
+Started GET "/cable" for 127.0.0.1 at 2024-05-15 12:04:53 -0300
+Started GET "/cable" [WebSocket] for 127.0.0.1 at 2024-05-15 12:04:53 -0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+[ActionCable] Broadcasting to 123: {:mensagem=>"Usuario  entrou"}
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from 123
+Finished "/cable" [WebSocket] for 127.0.0.1 at 2024-05-15 12:04:53 -0300
+ChatChannel stopped streaming from 
+Started GET "/cable" for 127.0.0.1 at 2024-05-15 12:06:50 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/cable" [WebSocket] for 127.0.0.1 at 2024-05-15 12:06:50 -0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+[ActionCable] Broadcasting to 123: {:mensagem=>"Usuario  entrou"}
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from 123
+Started GET "/?chat=123" for 127.0.0.1 at 2024-05-15 12:06:53 -0300
+Processing by ChatController#index as HTML
+  Parameters: {"chat"=>"123"}
+  Rendering layout layouts/application.html.erb
+  Rendering chat/index.html.erb within layouts/application
+  Rendered chat/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 221)
+  Rendered layout layouts/application.html.erb (Duration: 53.5ms | Allocations: 47416)
+Completed 200 OK in 69ms (Views: 57.6ms | ActiveRecord: 0.0ms | Allocations: 54321)
+
+
+Started GET "/cable" for 127.0.0.1 at 2024-05-15 12:06:54 -0300
+Started GET "/cable" [WebSocket] for 127.0.0.1 at 2024-05-15 12:06:54 -0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable" [WebSocket] for 127.0.0.1 at 2024-05-15 12:06:54 -0300
+ChatChannel stopped streaming from 123
+[ActionCable] Broadcasting to 123: {:mensagem=>"Usuario  entrou"}
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from 123
+ChatChannel#receive({"mensagem"=>"123"})
+[ActionCable] Broadcasting to 123: {"mensagem"=>"123", "action"=>"receive", "usuario"=>nil}
+ChatChannel transmitting {"mensagem"=>"123", "action"=>"receive", "usuario"=>nil} (via streamed from 123)
+ChatChannel#receive({"mensagem"=>"12345678"})
+[ActionCable] Broadcasting to 123: {"mensagem"=>"12345678", "action"=>"receive", "usuario"=>nil}
+ChatChannel transmitting {"mensagem"=>"12345678", "action"=>"receive", "usuario"=>nil} (via streamed from 123)

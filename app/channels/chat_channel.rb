@@ -14,6 +14,7 @@ class ChatChannel < ApplicationCable::Channel
   end
 
   def set_room
+    p 'configure'
     @chat_room = params[:chat]
   end
 
