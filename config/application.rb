@@ -10,10 +10,6 @@ module Chat
   class Application < Rails::Application
     # redis.url = 'redis://default:gVFaW09h2DkQLG1NjVg5FZNnanF5WkDH@redis-16110.c90.us-east-1-3.ec2.redns.redis-cloud.com:16110'
 
-    config.redis = {
-      url: 'redis://default:gVFaW09h2DkQLG1NjVg5FZNnanF5WkDH@redis-16110.c90.us-east-1-3.ec2.redns.redis-cloud.com:16110'
-    }
-
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.1
 
